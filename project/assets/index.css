@@ -167,9 +167,9 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
-.card {
-    width: 50%;
-    margin: 0%;
-    padding: 0%;
-}
+    .card {
+        width: 50%;
+        margin: 0%;
+        padding: 0%;
+    }
 }
