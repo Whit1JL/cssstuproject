@@ -10,58 +10,87 @@
 
 
 <body>
-    <header>
+   <header>
         <h1> CSS Snippet Cheatsheet </h1>
       
+<!-- changed "fun" intro-J -->
+        <p class="fun">Pssttt! I know they say cheating is bad, but we still created a CSS cheatsheet for you. See below for some very useful (and cool!) CSS tricks... [Hover Over Me]</p>
+   </header>
 
-        <p class="fun">(Hover over Me) See below for some very useful (and cool!) CSS tricks... </p>
-    </header>
-    <div class="card-cnt">
-        <div class="card">
-       <h3 class="crd-hdr">Mouse Over Selector</h3>
-       <p class="crd-mid">Hover effect</p>
-       <pre class="crd-bdy"><code>
-          a:hover {}
-             
+   <div class="card-cnt">
 
-       </code></pre>
-    </div>
-    <div class="card">
-        <h3 class="crd-hdr">Padding</h3>
-        <p class="crd-mid">Creates space around object</p>
-        <pre class="crd-bdy"><code>
-           padding: {}
+      <!-- changed text in card mid and body to make more uniform and informative -->
+   <div class="card">
+      <h3 class="crd-hdr">Hover Selector</h3>
+      <p class="crd-mid">This will select elements when you place the mouse over it. </p>
+      <pre class="crd-bdy">
+         <code>
+         a:hover {
+            background-color: purple;
+         }
+         </code>
+      </pre>
+   </div>
 
-        </code></pre>
-     </div>
-     <div class="card">
-        <h3 class="crd-hdr">Text Transform</h3>
-        <p class="crd-mid">What it sounds like!</p>
-        <pre class="crd-bdy"><code>
-      Text-transform {}
-   
-   </code>
+   <div class="card">
+      <h3 class="crd-hdr">Padding</h3>
+      <p class="crd-mid">Utilize this to create space around an element's content.</p>
+      <pre class="crd-bdy">
+         <code>
+         div {
+            padding-left: 2px;
+         }
+         </code>
+      </pre>
+   </div>
 
-        </pre>
-     </div>
-     <div class="card">
-        <h3 class="crd-hdr">Card Header</h3>
-        <p class="crd-mid">Above</p>
-        <p class="crd-bdy">This is the card body</p>
-     </div>
-     <div class="card">
-        <h3 class="crd-hdr">Card Header</h3>
-        <p class="crd-mid">Above</p>
-        <p class="crd-bdy">This is the card body</p>
-     </div>
-     <div class="card">
-        <h3 class="crd-hdr">Card Header</h3>
-        <p class="crd-mid">Above</p>
-        <p class="crd-bdy">This is the card body</p>
-     </div>
-     </div>
-    <!-- CSS 1 -->
-    <!-- CSS 2 -->
+   <div class="card">
+      <h3 class="crd-hdr">Text Transform</h3>
+      <p class="crd-mid">This will change the text.</p>
+      <pre class="crd-bdy">
+         <code>
+         div.c {
+            text-transform: lowercase;
+         }
+         </code>
+      </pre>
+   </div>
+
+   <div class="card">
+      <h3 class="crd-hdr">Pseudo Class</h3>
+      <p class="crd-mid">Use this to define a special state of an element.</p>
+      <pre class="crd-bdy">
+         <code>
+         selector:pseudo-class {
+           property: value;
+         }
+         </code>
+      </pre>
+   </div>
+
+   <div class="card">
+      <h3 class="crd-hdr">Variables</h3>
+      <p class="crd-mid">This will reuse specific values throughtout a document.</p>
+      <pre class="crd-bdy">
+         <code>
+         var(--name)
+         </code>
+      </pre>
+   </div>
+
+   <div class="card">
+      <h3 class="crd-hdr">Media Query</h3>
+      <p class="crd-mid">Use this @media rule to include a block of CSS properties only if a certain condition is true.</p>
+      <pre class="crd-bdy">
+         <code>
+         @media only screen and (max-width: 90px) {
+         body {
+            background-color: blue;
+         }
+         }
+         </code>
+      </pre>
+   </div>
 
 </body>
 

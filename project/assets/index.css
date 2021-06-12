@@ -5,8 +5,16 @@
     --hover: green;
     --hover2: lightblue;
 
-    
-    
+}
+
+/* added style to header */
+/* changed size in padding and width, as well as removed margin-J  */
+header {
+    text-align: center;
+    width: 100%;
+    padding: 10px;   
+    background-color: var(--primarycolor);
+    border: dashed 5px  var(--offwhite);
 }
 
 h1 {
@@ -14,23 +22,15 @@ h1 {
     padding: 0;
 }
 
-/* (CSS to highlight a code snippet by clicking on it!) 
-(HTML: <p class="all">Clicking once will select all of this text.</p>
-user-select: all;
-.all {
-    -moz-user-select: all;
-    -webkit-user-select: all;
-    -ms-user-select: all;
-    user-select: all;
-  }) */
-
+/* changed font-size and transition font-size which wasn't defined-J */
 .fun {
-    font-size: 2em;
-    transition: font-size 4s 1s;
+    font-size: 12px;
+    transition: 1.5px 4s 1s;
 }
   
+/* changed font-size to make page more responsive-J */
 .fun:hover {
-    font-size: 36px;
+    font-size: 20px;
 }
 
 body{
@@ -40,96 +40,91 @@ body{
     color: var(--offwhite);
 }
 
+/* justified content-J */
 .card-cnt{
     position: relative;
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    text-align: left;
 }
 
 /* added transition effect */
+/* removed position relative because it messed with screen, changed width to 350 to fit 3 boxes in the row, and reduced flex-grow by 100-J */
 .card{
-    position: relative;
+
+    text-align: left; 
     height: 300px;
-    width: 400px;
+    width: 350px;
     border: dashed 5px;
     border-color: var(--offwhite);
     background-color: var(--primarycolor);
     left: 5%;
     margin: 2.5%;
-    flex-grow: 400px;
+    flex-grow: 300px;
     transition: all 0.5s ease-in-out;
     
     
 }
 /* added transition effect */
+/* changed border radius from 10 to 1px, changed font size to 25px-J  */
 .card .crd-hdr{
     border: solid 3px;
     border-color: var(--secondarycolor);
-    border-radius: 10px;
-    text-align: center;
+    border-radius: 1px;
     position: relative;
+    text-align: center;
     margin: 0;
     left: 12%;
     top: -15px;
     color: var(--offwhite);
     background-color: var(--primarycolor);
     width: 75%;
-    font-size: 2em;
+    font-size: 25px;
     transition: all 0.5s ease-in-out;
 }
 /* added hover effect on cards */
-.card:hover, 
+.card:hover,
 .card:hover .crd-hdr{
     box-shadow: inset 0px 0px 20px var(--hover), 0 0 20px var(--hover2)
 }
 
-.card .crd-mid{
+/* changed margin to 12px-J */
+.crd-mid{
     position:relative;
     display: flex;
-    margin: 15px;
+    margin: 12px;
+    font-size: 21px;
     
 }
 
+/* added font-size, removed "code" in css, added flex wrap and user select to highlight code snippet-J */
 .card .crd-bdy{
     position: relative;
     background-color: var(--secondarycolor);
     display: flex;
+    flex-wrap: wrap;
+    font-size: 15px;
+    text-align: left;
+    user-select: all;
     
     flex-direction: column;
     margin: 15px;
     border-radius: 15px;
-    height: 50%;
-    
+    height: 50%;  
+}
 
-}
-code {
-    font-size: 2em;
-}
 /* created pre  */
+/* removed border radius=J*/
 .crd-bdy pre{
-    
-    padding: 5px;
+    padding: 0;
+    text-align: left;
     color: var(--offwhite);
-    border-radius: 10px;
     background-image: linear-gradient(
         var(--primarycolor),
-        var(--secondarycolor)
-    );
-   
-    
+        var(--secondarycolor)  
 }
 
-/* added style to header */
-header {
-    width: 95%;
-    text-align: center;
-    padding: 5px;
-    background-color: var(--primarycolor);
-    border: dashed 5px  var(--offwhite);
-    margin: 15px;
-    padding: 5px;
-    
-}
 
 /* added formatting here */
 p, p:hover {
@@ -143,26 +138,32 @@ p, p:hover {
 footer {
     margin: 15px;
     text-align: center;
-    padding: 5px;
+    padding: 0;
+    width: 100%;
     border: 20px solid var(--secondarycolor);
     color: var(--offwhite) ;
     background-color: var(---secondarycolor); 
     
-    
-    
 }
+
 
 @media screen and (max-width: 992px) {
 .card {
-  width: 75%;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
 }
   
 @media screen and (max-width: 768px) {
 .card { 
-    width: 50%;
+    width: 75%;
+    margin: 0%;
+    padding: 0%;
 }
 
 @media screen and (max-width: 767px) {
 .card {
-    width: 25%;
+    width: 50%;
+    margin: 0%;
+    padding: 0%;
 }
